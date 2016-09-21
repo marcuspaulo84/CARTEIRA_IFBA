@@ -105,7 +105,7 @@ return [
     |
     */
 
-    'password_sync' => env('ADLDAP_PASSWORD_SYNC', true),
+    'password_sync' => env('ADLDAP_PASSWORD_SYNC', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -192,7 +192,7 @@ return [
 
     'sync_attributes' => [
 
-        'name' => 'cn',
+        'name' => '',
 
     ],
 

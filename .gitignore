@@ -1,8 +1,9 @@
 /node_modules
-/public/storage
-/vendor
+/storage
 /.idea
 Homestead.json
 Homestead.yaml
 .env
 /config/auth.php
+/config/database.php
+/config/adldap.php

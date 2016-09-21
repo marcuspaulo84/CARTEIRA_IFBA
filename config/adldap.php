@@ -102,7 +102,7 @@ return [
                 |
                 */
 
-                'account_suffix' => '@acme.org',
+                'account_suffix' => '@ifba.edu.br',
 
                 /*
                 |--------------------------------------------------------------------------
@@ -118,7 +118,7 @@ return [
                 |
                 */
 
-                'domain_controllers' => ['corp-dc1.corp.acme.org', 'corp-dc2.corp.acme.org'],
+                'domain_controllers' => ['10.1.0.4', '10.1.0.5'],
 
                 /*
                 |--------------------------------------------------------------------------
@@ -158,7 +158,7 @@ return [
                 |
                 */
 
-                'base_dn' => 'dc=corp,dc=acme,dc=org',
+                'base_dn' => 'dc=intranet,dc=cefetba,dc=br',
 
                 /*
                 |--------------------------------------------------------------------------
@@ -172,7 +172,7 @@ return [
                 |
                 */
 
-                'admin_account_suffix' => '@acme.org',
+                'admin_account_suffix' => '',
 
                 /*
                 |--------------------------------------------------------------------------
@@ -187,8 +187,8 @@ return [
                 |
                 */
 
-                'admin_username' => env('ADLDAP_ADMIN_USERNAME', 'username'),
-                'admin_password' => env('ADLDAP_ADMIN_PASSWORD', 'password'),
+                'admin_username' => env('ADLDAP_ADMIN_USERNAME', 'marcusaraujo'),
+                'admin_password' => env('ADLDAP_ADMIN_PASSWORD', 'Ax1395rp'),
 
                 /*
                 |--------------------------------------------------------------------------
