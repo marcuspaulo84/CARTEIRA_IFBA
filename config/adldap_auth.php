@@ -192,7 +192,7 @@ return [
 
     'sync_attributes' => [
 
-        'name' => 'GivenName',
+        'name' => 'givenName',
 
     ],
 

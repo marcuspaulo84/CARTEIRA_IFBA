@@ -21,7 +21,7 @@
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0;z-index: 1001;">
         <div class="container">
             <div class="navbar-header">
 
@@ -35,7 +35,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Carteira IFBA') }}
                 </a>
             </div>
 
@@ -73,9 +73,26 @@
                         </li>
                     @endif
                 </ul>
+
             </div>
         </div>
     </nav>
+
+    @if (Auth::check())
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+    <ul class="nav navbar-nav navbar-left">
+        <!-- Authentication Links -->
+
+            <li><a href="{{ route('admin.listar') }}">Listar Servidor</a></li>
+            <li><a href="{{ route('cadastro') }}">Cadastrar</a></li>
+
+    </ul>
+            </div>
+        </div>
+    </nav>
+    @endif
 
     @yield('content')
 

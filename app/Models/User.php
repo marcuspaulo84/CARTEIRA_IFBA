@@ -31,7 +31,49 @@ class User extends Authenticatable
         return
     }*/
 
-    public function roles(){
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
 
+    //$user->addRole('Admin')
+    //$user->addRole($role);
+    public function addRole($role)
+    {
+        if (is_string($role)) {
+            return $this->roles()->save(
+                Role::where('name', $role)->firstOrFail()
+            );
+        }
+
+        return $this->roles()->save(
+            Role::where('name', $role->name)->firstOrFail()
+        );
+
+    }
+
+    public function revokeRole($role)
+    {
+        if (is_string($role)) {
+            return $this->roles()->detach(
+                Role::where('name', $role)->firstOrFail()
+            );
+        }
+
+        return $this->roles()->detach($role);
+    }
+
+    public function hasRole($role)
+    {
+        if (is_string($role)) {
+            return $this->roles->contains('name', $role);
+        }
+
+        return $role->intersect($this->roles)->count();
+    }
+
+    public function isAdmin()
+    {
+        return $this->hasRole('Admin');
     }
 }
