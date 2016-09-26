@@ -24,8 +24,8 @@
                     <td>{{$user->email}}</td>
                     <td>
 
-                        @can('user_edit')
-                        <a href="{{route('admin.users.edit',['id'=>$user->id])}}" class="btn btn-default">
+                        @can('user_list')
+                        <a href="{{route('admin.users.index')}}" class="btn btn-default">
                             Edit
                         </a>
                         @endcan

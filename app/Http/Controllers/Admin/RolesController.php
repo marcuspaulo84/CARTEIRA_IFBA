@@ -2,8 +2,8 @@
 
 namespace CARTEIRA_IFBA\Http\Controllers\Admin;
 
-use CARTEIRA_IFBA\Models\Permission;
-use CARTEIRA_IFBA\Models\Role;
+use App\Models\Permission;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Application as App;
 

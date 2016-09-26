@@ -41,4 +41,7 @@ class LoginController extends Controller
         //dd(\Adldap::auth()->attempt('username', 'password'));
         $this->middleware('guest', ['except' => 'logout']);
     }
+
+    //authenticated(Request::a, Auth::user());
+
 }

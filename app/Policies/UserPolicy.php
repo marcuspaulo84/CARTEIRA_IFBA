@@ -17,7 +17,7 @@ class UserPolicy
      * @return mixed
      */
 
-    public function before(User $user)
+    /*public function before(User $user)
     {
         if ($user->isSuperAdmin()) {
             return true;
@@ -27,7 +27,7 @@ class UserPolicy
     public function view(User $user)
     {
 
-    }
+    }*/
 
 
 }

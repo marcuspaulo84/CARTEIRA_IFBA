@@ -72,6 +72,10 @@ class User extends Authenticatable
         return $role->intersect($this->roles)->count();
     }
 
+    public function emptyRole(){
+        $this->roles->isEmpty();
+    }
+
     public function isAdmin()
     {
         return $this->hasRole('Admin');
